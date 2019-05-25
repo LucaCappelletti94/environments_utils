@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: environments-utils
+Version: 1.0.0
+Summary: Utilities to identify which environments is your python script running within.
+Home-page: https://github.com/LucaCappelletti94/environments_utils
+Author: Luca Cappelletti
+Author-email: cappelletti.luca94@gmail.com
+License: MIT
+Description: environments_utils
+        =====================================================================================
+        |travis| |sonar_quality| |sonar_maintainability| |sonar_coverage| |code_climate_maintainability| |pip|
+        
+        Utilities to identify which environments is your python script running within.
+        
+        How do I get this?
+        ----------------------------------
+        As usual, just run pip:
+        
+        .. code:: bash
+        
+            pip install environments_utils
+        
+        
+        is_tmux
+        -----------------------------------
+        Return a boolean representing if script is running within a TMUX-like terminal.
+        
+        .. code:: python
+        
+            from environments_utils import is_tmux
+        
+            if not is_tmux():
+                print("This script is long running, consider starting it within a TMUX-like terminal.")
+        
+        is_notebook
+        -----------------------------------
+        Return a boolean representing if script is running within a jupyter notebook.
+        
+        .. code:: python
+        
+            from environments_utils import is_notebook
+            from tqdm import tqdm_notebook, tqdm as tqdm_cli
+        
+            tqdm = tqdm_notebook if is_notebook() else tqdm_cli
+        
+        
+        .. |travis| image:: https://travis-ci.org/LucaCappelletti94/environments_utils.png
+           :target: https://travis-ci.org/LucaCappelletti94/environments_utils
+        
+        .. |sonar_quality| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_environments_utils&metric=alert_status
+            :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_environments_utils
+        
+        .. |sonar_maintainability| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_environments_utils&metric=sqale_rating
+            :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_environments_utils
+        
+        .. |sonar_coverage| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_environments_utils&metric=coverage
+            :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_environments_utils
+        
+        .. |code_climate_maintainability| image:: https://api.codeclimate.com/v1/badges/25fb7c6119e188dbd12c/maintainability
+           :target: https://codeclimate.com/github/LucaCappelletti94/environments_utils/maintainability
+           :alt: Maintainability
+        
+        .. |pip| image:: https://badge.fury.io/py/environments_utils.svg
+            :target: https://badge.fury.io/py/environments_utils
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Provides-Extra: test

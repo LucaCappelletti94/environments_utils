@@ -1,0 +1,11 @@
+README.rst
+setup.py
+environments_utils/__init__.py
+environments_utils/__version__.py
+environments_utils/is_notebook.py
+environments_utils/is_tmux.py
+environments_utils.egg-info/PKG-INFO
+environments_utils.egg-info/SOURCES.txt
+environments_utils.egg-info/dependency_links.txt
+environments_utils.egg-info/requires.txt
+environments_utils.egg-info/top_level.txt
