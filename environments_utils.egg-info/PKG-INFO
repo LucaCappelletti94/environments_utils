@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: environments-utils
-Version: 1.0.0
+Version: 1.0.1
 Summary: Utilities to identify which environments is your python script running within.
 Home-page: https://github.com/LucaCappelletti94/environments_utils
 Author: Luca Cappelletti
