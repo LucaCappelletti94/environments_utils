@@ -1,4 +1,9 @@
-\.vscode/
-\.DS_Store
-*/__pycache__/*
+.notipy.json
 **/__pycache__/*
+
+**/__pycache__/*
+\.DS_Store
+
+*/__pycache__/*
+
+\.vscode/
