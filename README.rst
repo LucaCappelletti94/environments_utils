@@ -18,7 +18,27 @@ Since some software handling coverages sometime get slightly different results, 
 
 |coveralls| |sonar_coverage| |code_climate_coverage|
 
-AFTER
+is_tmux
+-----------------------------------
+Return a boolean representing if script is running within a TMUX-like terminal.
+
+.. code:: python
+
+    from environments_utils import is_tmux
+
+    if not is_tmux():
+        print("This script is long running, consider starting it within a TMUX-like terminal.")
+
+is_notebook
+-----------------------------------
+Return a boolean representing if script is running within a jupyter notebook.
+
+.. code:: python
+
+    from environments_utils import is_notebook
+    from tqdm import tqdm_notebook, tqdm as tqdm_cli
+
+    tqdm = tqdm_notebook if is_notebook() else tqdm_cli
 
 .. |travis| image:: https://travis-ci.org/LucaCappelletti94/environments_utils.png
    :target: https://travis-ci.org/LucaCappelletti94/environments_utils
