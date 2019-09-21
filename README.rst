@@ -61,11 +61,11 @@ Return a boolean representing if script is running within a jupyter notebook.
     :alt: Coveralls Coverage
 
 .. |pip| image:: https://badge.fury.io/py/environments_utils.svg
-    :target: https://badge.fury.io/py/environments_utils
+    :target: https://badge.fury.io/py/environments-utils
     :alt: Pypi project
 
 .. |downloads| image:: https://pepy.tech/badge/environments_utils
-    :target: https://pepy.tech/badge/environments_utils
+    :target: https://pepy.tech/badge/environments-utils
     :alt: Pypi total project downloads 
 
 .. |codacy|  image:: https://api.codacy.com/project/badge/Grade/a1fb39855f23448e8abd01cbf72c44f5
