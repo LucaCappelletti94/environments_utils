@@ -4,6 +4,7 @@ setup.py
 environments_utils/__init__.py
 environments_utils/__version__.py
 environments_utils/is_notebook.py
+environments_utils/is_os.py
 environments_utils/is_stdout_enabled.py
 environments_utils/is_tmux.py
 environments_utils.egg-info/PKG-INFO
