@@ -40,6 +40,24 @@ Return a boolean representing if script is running within a jupyter notebook.
 
     tqdm = tqdm_notebook if is_notebook() else tqdm_cli
 
+Operative system identifiers
+-----------------------------------
+Utilities to identify the operative system running the app.
+
+.. code:: python
+
+    from environments_utils import is_macos, is_windows, is_linux
+
+    if is_macos():
+        print("The OS is macOS")
+
+    if is_windows():
+        print("The OS is Windows")
+
+    if is_linux():
+        print("The OS is Linux")
+
+
 .. |travis| image:: https://travis-ci.org/LucaCappelletti94/environments_utils.png
    :target: https://travis-ci.org/LucaCappelletti94/environments_utils
    :alt: Travis CI build
