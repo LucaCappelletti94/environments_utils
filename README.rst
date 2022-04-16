@@ -1,6 +1,6 @@
 environments_utils
 =========================================================================================
-|travis| |sonar_quality| |sonar_maintainability| |codacy| |code_climate_maintainability| |pip| |downloads|
+|pip| |downloads|
 
 Utilities to identify which environments is your python script running within.
 
@@ -11,12 +11,6 @@ As usual, just download it using pip:
 .. code:: shell
 
     pip install environments_utils
-
-Tests Coverage
-----------------------------------------------
-Since some software handling coverages sometime get slightly different results, here's three of them:
-
-|coveralls| |sonar_coverage| |code_climate_coverage|
 
 is_tmux
 -----------------------------------
@@ -79,26 +73,6 @@ Utilities to identify the architectures running the app.
         print("This is an ARM machine, such as Mac M1")
 
 
-.. |travis| image:: https://travis-ci.org/LucaCappelletti94/environments_utils.png
-   :target: https://travis-ci.org/LucaCappelletti94/environments_utils
-   :alt: Travis CI build
-
-.. |sonar_quality| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_environments_utils&metric=alert_status
-    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_environments_utils
-    :alt: SonarCloud Quality
-
-.. |sonar_maintainability| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_environments_utils&metric=sqale_rating
-    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_environments_utils
-    :alt: SonarCloud Maintainability
-
-.. |sonar_coverage| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_environments_utils&metric=coverage
-    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_environments_utils
-    :alt: SonarCloud Coverage
-
-.. |coveralls| image:: https://coveralls.io/repos/github/LucaCappelletti94/environments_utils/badge.svg?branch=master
-    :target: https://coveralls.io/github/LucaCappelletti94/environments_utils?branch=master
-    :alt: Coveralls Coverage
-
 .. |pip| image:: https://badge.fury.io/py/environments-utils.svg
     :target: https://badge.fury.io/py/environments-utils
     :alt: Pypi project
@@ -106,15 +80,3 @@ Utilities to identify the architectures running the app.
 .. |downloads| image:: https://pepy.tech/badge/environments-utils
     :target: https://pepy.tech/badge/environments-utils
     :alt: Pypi total project downloads 
-
-.. |codacy|  image:: https://api.codacy.com/project/badge/Grade/a1fb39855f23448e8abd01cbf72c44f5
-    :target: https://www.codacy.com/app/LucaCappelletti94/environments_utils?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LucaCappelletti94/environments_utils&amp;utm_campaign=Badge_Grade
-    :alt: Codacy Maintainability
-
-.. |code_climate_maintainability| image:: https://api.codeclimate.com/v1/badges/38f586ee270447a1d22a/maintainability
-    :target: https://codeclimate.com/github/LucaCappelletti94/environments_utils/maintainability
-    :alt: Maintainability
-
-.. |code_climate_coverage| image:: https://api.codeclimate.com/v1/badges/38f586ee270447a1d22a/test_coverage
-    :target: https://codeclimate.com/github/LucaCappelletti94/environments_utils/test_coverage
-    :alt: Code Climate Coverate
