@@ -1,2 +1,2 @@
 """Current version of package environments_utils"""
-__version__ = "1.0.3"
+__version__ = "1.0.4"
