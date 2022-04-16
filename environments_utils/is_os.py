@@ -1,6 +1,7 @@
-"""Utilities relative to operative systems."""
+"""Utilities relative to detecting operative systems."""
 import sys
 from .is_architecture import is_arm
+
 
 def is_macos() -> bool:
     """Return whether OS is macOS."""
