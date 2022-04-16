@@ -46,7 +46,7 @@ Utilities to identify the operative system running the app.
 
 .. code:: python
 
-    from environments_utils import is_macos, is_windows, is_linux
+    from environments_utils import is_macos, is_windows, is_linux, is_macos_with_arm
 
     if is_macos():
         print("The OS is macOS")
@@ -56,6 +56,27 @@ Utilities to identify the operative system running the app.
 
     if is_linux():
         print("The OS is Linux")
+
+    if is_macos_with_arm():
+        print("The machine is macOS with ARM processors like M1")
+
+
+Architectures identifiers
+-----------------------------------
+Utilities to identify the architectures running the app.
+
+.. code:: python
+
+    from environments_utils import is_x86, is_x86_64, is_arm
+
+    if is_x86():
+        print("This is a 32 bit system with x86 architecture.")
+
+    if is_x86_64():
+        print("This is a 64 bit system with x86_64 architecture.")
+
+    if is_arm():
+        print("This is an ARM machine, such as Mac M1")
 
 
 .. |travis| image:: https://travis-ci.org/LucaCappelletti94/environments_utils.png
