@@ -3,6 +3,8 @@ Environment utils
 |pip| |downloads|
 
 Utilities to identify which environments is your python script running within.
+This include stuff like whether you are in a `Jupyter Notebook`, within a node of a `SLURM` cluster,
+the architecture of the system you are using and which operative system you are running.
 
 How do I install this package?
 ----------------------------------------------
@@ -12,8 +14,12 @@ As usual, just download it using pip:
 
     pip install environments_utils
 
-is_tmux
+
+Some examples
 -----------------------------------
+
+is_tmux
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Return a boolean representing if script is running within a TMUX-like terminal.
 
 .. code:: python
@@ -24,7 +30,7 @@ Return a boolean representing if script is running within a TMUX-like terminal.
         print("This script is long running, consider starting it within a TMUX-like terminal.")
 
 is_notebook
------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Return a boolean representing if script is running within a jupyter notebook.
 
 .. code:: python
@@ -34,8 +40,28 @@ Return a boolean representing if script is running within a jupyter notebook.
 
     tqdm = tqdm_notebook if is_notebook() else tqdm_cli
 
+is_slurm_node
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Returns whether you are in a `SLURM` cluster node.
+
+.. code:: python
+
+    from environments_utils import (
+        is_slurm_node,
+        get_slurm_node_id,
+        get_number_of_available_slurm_nodes
+    )
+
+    if is_slurm_node():
+        print(
+            "YAY! I'm in node {} of {}!",
+            get_slurm_node_id(),
+            get_number_of_available_slurm_nodes()
+        )
+
+
 Operative system identifiers
------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Utilities to identify the operative system running the app.
 
 .. code:: python
@@ -56,7 +82,7 @@ Utilities to identify the operative system running the app.
 
 
 Architectures identifiers
------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Utilities to identify the architectures running the app.
 
 .. code:: python
