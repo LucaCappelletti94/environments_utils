@@ -99,6 +99,20 @@ Utilities to identify the architectures running the app.
         print("This is an ARM machine, such as Mac M1")
 
 
+Internet connection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Utility to detect whether the user is connected to internet.
+
+.. code:: python
+
+    from environments_utils import is_online
+
+    if is_online():
+        print("You are online.")
+    else:
+        print("You are offline")
+
+
 .. |pip| image:: https://badge.fury.io/py/environments-utils.svg
     :target: https://badge.fury.io/py/environments-utils
     :alt: Pypi project
