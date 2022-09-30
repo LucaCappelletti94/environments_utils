@@ -14,4 +14,4 @@ def is_x86() -> bool:
 
 def is_x86_64() -> bool:
     """Return whether the current computer has x86_64 (64 bit) architecture."""
-    return platform.machine() == "x86_64"
+    return platform.machine() in ["x86_64", "AMD64"]
