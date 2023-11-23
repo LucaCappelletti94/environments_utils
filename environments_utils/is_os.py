@@ -37,7 +37,7 @@ def is_macos_rosetta() -> bool:
     if not is_macos():
         return False
     try:
-        # If the following command returns 1, it means that the Rosetta
+        # If the following command returns b'1\n', it means that the Rosetta
         # translation environment is being used, and the currently executing
         # app is being translated by Rosetta.
         return (
@@ -45,8 +45,8 @@ def is_macos_rosetta() -> bool:
                 ["sysctl", "-n", "sysctl.proc_translated"],
                 check=True,
                 capture_output=True,
-            )
-            == 1
+            ).stdout.strip()
+            == b'1'
         )
     except subprocess.CalledProcessError:
         # Otherwise if this crashes you are running this command on an Intel-based Mac,
