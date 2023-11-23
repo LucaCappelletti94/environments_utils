@@ -23,7 +23,7 @@ pip install environments_utils
 from environments_utils import is_macos_rosetta
 
 if is_macos_rosetta():
-    print("This script is running within a macOS with Rosetta.")
+    print("I am running inside Rosetta!")
 ```
 
 ### is_tmux
