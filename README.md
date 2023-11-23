@@ -7,8 +7,7 @@ Utilities to identify the environment in which your Python script is running.
 This includes determining whether you are in a `Jupyter Notebook`, within a node of a `SLURM` cluster, the architecture of the system you are using, and the operating system.
 
 ## Installation
-
-To install this package, use pip:
+Install `environments_utils` from `PyPi`:
 
 ```shell
 pip install environments_utils
