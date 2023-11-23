@@ -33,23 +33,25 @@ def is_macos_rosetta() -> bool:
     not work correctly or at all. For example, some operations that would work
     normally on an Intel-based Mac might not work on an Apple silicon Mac when
     executed within the Rosetta translation environment.
-
-    How does this method work?
-    --------------------------
-    This method checks if the system is macOS and if the Rosetta translation
-    environment is being used. The issue is that the Rosetta translation is meant
-    to be transparent to the user, so it is hard to detect it. In order to detect
-    Rosetta nevertheless, we use the fact that the Rosetta translation environment
-    is not complete, and some operations that would work normally on an Intel-based
-    will crash in the current version of Rosetta.
     """
     if not is_macos():
         return False
     try:
-        subprocess.run(["/usr/bin/arch"], check=True)
-        return False
+        # If the following command returns 1, it means that the Rosetta
+        # translation environment is being used, and the currently executing
+        # app is being translated by Rosetta.
+        return (
+            subprocess.run(
+                ["sysctl", "-n", "sysctl.proc_translated"],
+                check=True,
+                capture_output=True,
+            )
+            == 1
+        )
     except subprocess.CalledProcessError:
-        return True
+        # Otherwise if this crashes you are running this command on an Intel-based Mac,
+        # which does not have the sysctl.proc_translated key.
+        return False
 
 
 def is_windows() -> bool:
