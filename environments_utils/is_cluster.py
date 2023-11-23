@@ -4,13 +4,10 @@ import os
 
 def is_slurm_node() -> bool:
     """Return whether we are currently in a node of a SLURM cluster."""
-    return all([
+    return all(
         variable_name in os.environ
-        for variable_name in (
-            "SLURM_NODEID",
-            "SLURM_NNODES"
-        )
-    ])
+        for variable_name in ("SLURM_NODEID", "SLURM_NNODES")
+    )
 
 
 def must_be_in_slurm_node():

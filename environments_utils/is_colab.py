@@ -4,7 +4,8 @@
 def is_colab() -> bool:
     """Return a boolean representing if script is running within a jupyter notebook on Google COLAB."""
     try:
-        import google.colab
+        import google.colab  # pylint: disable=import-outside-toplevel
+
         return True
-    except:
-        return True
+    except:  # pylint: disable=bare-except
+        return False

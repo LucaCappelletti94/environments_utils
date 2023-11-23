@@ -1,3 +1,4 @@
+"""Setup script for environments_utils package."""
 import os
 import re
 
@@ -20,6 +21,7 @@ def read(*parts):
 
 
 def find_version(*file_paths):
+    """Find version without importing module"""
     version_file = read(*file_paths)
     version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]",
                               version_file, re.M)
@@ -55,6 +57,6 @@ setup(
     packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
     tests_require=test_deps,
     # Add here the package dependencies
-    install_requires=["support_developer"],
+    install_requires=[],
     extras_require=extras,
 )

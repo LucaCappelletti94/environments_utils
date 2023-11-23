@@ -1,6 +1,4 @@
 """Module providing multiple environmnet-related utilities."""
-from support_developer import support_luca
-
 from .is_architecture import is_arm, is_x86, is_x86_64
 from .is_cluster import (
     get_number_of_available_slurm_nodes,
@@ -11,11 +9,10 @@ from .is_cluster import (
 from .is_colab import is_colab
 from .is_notebook import is_notebook
 from .is_online import is_online
-from .is_os import is_linux, is_macos, is_macos_with_arm, is_windows
+from .is_os import is_linux, is_macos, is_macos_with_arm, is_windows, is_macos_rosetta
 from .is_stdout_enabled import is_stdout_enabled
 from .is_tmux import is_tmux
 
-support_luca("environments_utils")
 
 __all__ = [
     "is_notebook",
@@ -26,6 +23,7 @@ __all__ = [
     "is_macos",
     "is_windows",
     "is_macos_with_arm",
+    "is_macos_rosetta",
     "is_online",
     "is_x86",
     "is_x86_64",

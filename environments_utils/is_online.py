@@ -1,3 +1,4 @@
+"""This module contains the is_online function."""
 import socket
 
 
@@ -12,5 +13,5 @@ def is_online() -> bool:
             2
         ).close()
         return True
-    except Exception:
+    except: # pylint: disable=bare-except
         return False
