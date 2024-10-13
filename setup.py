@@ -33,6 +33,7 @@ __version__ = find_version("environments_utils", "__version__.py")
 
 test_deps = [
     "pytest",
+    "pytest-readme",
     "validate_version_code",
 ]
 
