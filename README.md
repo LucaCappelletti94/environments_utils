@@ -1,7 +1,10 @@
 # Environment Utils
 
 [![Pypi project](https://badge.fury.io/py/environments-utils.svg)](https://badge.fury.io/py/environments-utils)
+[![python](https://img.shields.io/pypi/pyversions/environments-utils)](https://pypi.org/project/environments-utils/)
+[![license](https://img.shields.io/pypi/l/environments-utils)](https://pypi.org/project/environments-utils/)
 [![Pypi total project downloads](https://pepy.tech/badge/environments-utils)](https://pepy.tech/badge/environments-utils)
+[![Github Actions](https://github.com/LucaCappelletti94/environments-utils/actions/workflows/python.yml/badge.svg)](https://github.com/LucaCappelletti94/environments-utils/actions/)
 
 Utilities to identify the environment in which your Python script is running.
 
@@ -119,7 +122,7 @@ else:
 
 ## GPU Availability
 
-The packaged also provides heuristics to determine whether a GPU is available, which do not require the installation of `torch` or `tensorflow`. It does have the same limitations of those methods, as it still requires the drivers to be installed.
+The packaged also provides heuristics to determine whether a GPU is available, which **do not require** the installation of `torch` or `tensorflow`. It does have the same limitations of those methods, as it still requires the drivers to be installed.
 
 ```python
 from environments_utils import has_gpu, has_nvidia_gpu, has_amd_gpu, has_intel_gpu
