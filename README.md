@@ -4,7 +4,7 @@
 [![python](https://img.shields.io/pypi/pyversions/environments-utils)](https://pypi.org/project/environments-utils/)
 [![license](https://img.shields.io/pypi/l/environments-utils)](https://pypi.org/project/environments-utils/)
 [![Pypi total project downloads](https://pepy.tech/badge/environments-utils)](https://pepy.tech/badge/environments-utils)
-[![Github Actions](https://github.com/LucaCappelletti94/environments-utils/actions/workflows/python.yml/badge.svg)](https://github.com/LucaCappelletti94/environments-utils/actions/)
+[![Github Actions](https://github.com/LucaCappelletti94/environments_utils/actions/workflows/python.yml/badge.svg)](https://github.com/LucaCappelletti94/environments_utils/actions/)
 
 Utilities to identify the environment in which your Python script is running.
 
