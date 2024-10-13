@@ -9,3 +9,5 @@
 \.vscode/
 *.egg-info
 build
+dist
+test_readme.py
