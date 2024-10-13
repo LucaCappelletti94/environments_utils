@@ -1,4 +1,5 @@
 """Submodule to help provide the instruction sets available in peculiar environments."""
+
 import subprocess
 from typing import List
 
@@ -32,7 +33,9 @@ def get_macos_available_instructions() -> List[str]:
 
     # Get the list of available instructions
     sysctl_output = subprocess.check_output(["sysctl", "-a"]).decode("utf-8")
-    cpu_features = [line for line in sysctl_output.split("\n") if "machdep.cpu.features" in line][0]
+    cpu_features = [
+        line for line in sysctl_output.split("\n") if "machdep.cpu.features" in line
+    ][0]
 
     # Extract the list of available instructions
     available_instructions = cpu_features.split(": ")[1].split(" ")

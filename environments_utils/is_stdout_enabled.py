@@ -1,4 +1,5 @@
 """Submodule providing utilities relative to detect whether the stdout is enabled."""
+
 import sys
 
 

@@ -1,4 +1,5 @@
 """Submodule providing utilities relative to detect whether we are in a TMUX."""
+
 import os
 
 

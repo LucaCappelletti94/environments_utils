@@ -1,7 +1,8 @@
 """Utilities relative to detecting operative systems."""
+
 import sys
 import subprocess
-from .is_architecture import is_arm
+from environments_utils.is_architecture import is_arm
 
 
 def is_macos() -> bool:
@@ -46,7 +47,7 @@ def is_macos_rosetta() -> bool:
                 check=True,
                 capture_output=True,
             ).stdout.strip()
-            == b'1'
+            == b"1"
         )
     except subprocess.CalledProcessError:
         # Otherwise if this crashes you are running this command on an Intel-based Mac,

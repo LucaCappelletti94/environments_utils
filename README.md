@@ -1,4 +1,5 @@
 # Environment Utils
+
 [![Pypi project](https://badge.fury.io/py/environments-utils.svg)](https://badge.fury.io/py/environments-utils)
 [![Pypi total project downloads](https://pepy.tech/badge/environments-utils)](https://pepy.tech/badge/environments-utils)
 
@@ -7,6 +8,7 @@ Utilities to identify the environment in which your Python script is running.
 This includes determining whether you are in a `Jupyter Notebook`, within a node of a `SLURM` cluster, the architecture of the system you are using, and the operating system.
 
 ## Installation
+
 Install `environments_utils` from `PyPi`:
 
 ```shell
@@ -16,6 +18,7 @@ pip install environments_utils
 ## Examples
 
 ### Detect Rosetta on macOS with Python
+
 [Rosetta](https://developer.apple.com/documentation/apple_silicon/about_the_rosetta_translation_environment) is a translation environment that enables you to run apps that contain x86_64 instructions on Apple silicon. In some cases, Rosetta may fail to translate an app successfully, and lead to crashes or other unexpected behavior. It is sometimes therefore useful to know whether the script is running within a macOS with Rosetta so to better understand whether the odd behaviour you may be experiencing is due to Rosetta or not.
 
 To detect Rosetta, simply run:
@@ -114,3 +117,24 @@ else:
     print("You are offline")
 ```
 
+## GPU Availability
+
+The packaged also provides heuristics to determine whether a GPU is available, which do not require the installation of `torch` or `tensorflow`. It does have the same limitations of those methods, as it still requires the drivers to be installed.
+
+```python
+from environments_utils import has_gpu, has_nvidia_gpu, has_amd_gpu, has_intel_gpu
+
+if has_gpu():
+    if has_nvidia_gpu():
+        print("NVIDIA GPU is available.")
+    elif has_amd_gpu():
+        print("AMD GPU is available.")
+    elif has_intel_gpu():
+        print("Intel GPU is available.")
+else:
+    print("GPU is not available.")
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

@@ -1,4 +1,5 @@
 """Submodule providing utilities relative to detecting architectures."""
+
 import platform
 
 

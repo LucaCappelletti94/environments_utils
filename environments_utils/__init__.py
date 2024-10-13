@@ -1,16 +1,31 @@
 """Module providing multiple environmnet-related utilities."""
-from .available_instructions import get_macos_available_instructions
-from .is_architecture import is_arm, is_x86, is_x86_64
-from .is_cluster import (get_number_of_available_slurm_nodes,
-                         get_slurm_node_id, is_slurm_node,
-                         must_be_in_slurm_node)
-from .is_colab import is_colab
-from .is_notebook import is_notebook
-from .is_online import is_online
-from .is_os import (is_linux, is_macos, is_macos_rosetta, is_macos_with_arm,
-                    is_windows)
-from .is_stdout_enabled import is_stdout_enabled
-from .is_tmux import is_tmux
+
+from environments_utils.available_instructions import get_macos_available_instructions
+from environments_utils.is_architecture import is_arm, is_x86, is_x86_64
+from environments_utils.is_cluster import (
+    get_number_of_available_slurm_nodes,
+    get_slurm_node_id,
+    is_slurm_node,
+    must_be_in_slurm_node,
+)
+from environments_utils.is_colab import is_colab
+from environments_utils.is_notebook import is_notebook
+from environments_utils.is_online import is_online
+from environments_utils.is_os import (
+    is_linux,
+    is_macos,
+    is_macos_rosetta,
+    is_macos_with_arm,
+    is_windows,
+)
+from environments_utils.is_stdout_enabled import is_stdout_enabled
+from environments_utils.is_tmux import is_tmux
+from environments_utils.has_gpu import (
+    has_amd_gpu,
+    has_gpu,
+    has_intel_gpu,
+    has_nvidia_gpu,
+)
 
 __all__ = [
     "is_notebook",
@@ -31,4 +46,8 @@ __all__ = [
     "get_slurm_node_id",
     "get_number_of_available_slurm_nodes",
     "get_macos_available_instructions",
+    "has_gpu",
+    "has_nvidia_gpu",
+    "has_amd_gpu",
+    "has_intel_gpu",
 ]
