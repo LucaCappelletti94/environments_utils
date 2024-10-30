@@ -1,4 +1,5 @@
 """Unit tests for is_notebook() function."""
+
 from environments_utils import is_notebook
 
 

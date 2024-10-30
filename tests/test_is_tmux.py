@@ -1,4 +1,5 @@
 """Unit tests for is_tmux function."""
+
 from environments_utils import is_tmux
 
 

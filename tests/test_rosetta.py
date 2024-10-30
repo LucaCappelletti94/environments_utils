@@ -1,4 +1,5 @@
 """Module to try and run the rosetta detection function."""
+
 from environments_utils import is_macos_rosetta
 from environments_utils import is_windows, is_linux, is_arm
 

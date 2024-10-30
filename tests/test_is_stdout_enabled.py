@@ -1,4 +1,5 @@
 """ test_is_stdout_enabled.py"""
+
 from environments_utils import is_stdout_enabled
 
 

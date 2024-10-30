@@ -1,4 +1,5 @@
 """Test whether the methods in the available_instructions submodule are working."""
+
 import pytest
 
 from environments_utils import get_macos_available_instructions, is_macos

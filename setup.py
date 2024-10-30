@@ -1,4 +1,5 @@
 """Setup script for environments_utils package."""
+
 import os
 import re
 
@@ -46,7 +47,7 @@ setup(
     version=__version__,
     description="Utilities to identify which environments is your python script running within.",
     long_description=long_description,
-    long_description_content_type='text/markdown',
+    long_description_content_type="text/markdown",
     url="https://github.com/LucaCappelletti94/environments_utils",
     author="Luca Cappelletti",
     author_email="cappelletti.luca94@gmail.com",
